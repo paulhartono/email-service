@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "SendGrid",
+    "module": "sendgrid",
+    "status": 1,
+    "priority": 1,
+    "sender": "admin@jedlie.cf"
+  },
+  {
+    "id": 2,
+    "name": "MailGun",
+    "module": "mailgun",
+    "status": 1,
+    "priority": 2,
+    "sender": "noreply@jedlie.cf"
+  }
+]
