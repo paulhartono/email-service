@@ -11,22 +11,28 @@ This micro service is an abstraction service to email providers. Currently, it s
 ## Environment Variables
 
 `VERSION` app version
+
 `PORT` app server port
+
 `SENDGRID_SEND_URL` (module specific env variable) SendGrid send URL
+
 `SENDGRID_API_KEY` (module specific env variable) SendGrid API KEY
+
 `MAILGUN_SEND_URL` (module specific env variable) Mailgun send URL
+
 `MAILGUN_API_KEY` (module specific env variable) Mailgun API KEY
 
 ## How to run: Using Docker
 
 ### Run straight from Cloud Repo
 
-- Create `.env` file (refer to explanation above)
+- Create `.env` file (refer to "ENVIRONMENT VARIABLES" section above)
 - Run downloaded image: `docker run --rm -it --name email-service --env-file=.env phartono/email-service:latest`
 
 ### Build image locally
 
 - Clone the project
+- Create `.env` file (refer to "ENVIRONMENT VARIABLES" section above)
 - type `./run.sh .env` or you can create your own environment variable
 
 ## How to run: Using npm
@@ -34,6 +40,7 @@ This micro service is an abstraction service to email providers. Currently, it s
 ### Setup
 
 - Clone the project
+- Create `.env` file (refer to "ENVIRONMENT VARIABLES" section above)
 - Type `npm install`
 
 ### TEST
