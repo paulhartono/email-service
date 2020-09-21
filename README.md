@@ -24,13 +24,6 @@ This micro service is an abstraction service to email providers. Currently, it s
 
 ## How to run: Using Docker
 
-### Run straight from Cloud Repo
-
-- Create `.env` file (refer to "ENVIRONMENT VARIABLES" section above)
-- Run downloaded image: `docker run --rm -it --name email-service --env-file=.env phartono/email-service:latest`
-
-### Build image locally
-
 - Clone the project
 - Create `.env` file (refer to "ENVIRONMENT VARIABLES" section above)
 - type `./run.sh .env` or you can create your own environment variable
