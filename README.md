@@ -2,6 +2,11 @@
 
 ## Demo
 
+**Check Version (make sure you are hitting the right URL)**
+Go to `http://3.25.128.99:5500/version`
+
+**Send Email**
+
 ```
 curl --request POST 'http://3.25.128.99:5500' \
 --header 'Content-Type: application/json' \
