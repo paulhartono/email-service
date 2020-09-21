@@ -1,5 +1,26 @@
 # Email Service
 
+## Demo
+
+```
+curl --request POST 'http://3.25.128.99:5500' \
+--header 'Content-Type: application/json' \
+--data '{
+    "to": [
+        {
+            "name": "Recipient Name",
+            "email": "p4ul81@yahoo.com"
+        }
+    ],
+    "from": {
+        "name": "test",
+        "email": "test@jedlie.cf"
+    },
+    "subject": "from aws",
+    "body": "this is a test message"
+}'
+```
+
 ## Overview
 
 This micro service is an abstraction service to email providers. Currently, it supports abstraction to SendGrid and Mailgun Service Provider.
