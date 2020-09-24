@@ -2,12 +2,16 @@ import ErrorCode from '../models/error-code';
 import MailPayload from '../models/mail-payload';
 import Result from '../models/result';
 
+interface ServiceProviderModule {
+  sendmail(payload: any, apikey?: string, url?: string): Promise<Result<boolean>>;
+}
+
 const callProvider = async (module: string, payload: MailPayload): Promise<Result<boolean>> => {
   let result: Result<boolean> = new Result();
 
   try {
     // console.debug(`module: `, module);
-    const { sendmail } = await import(`../modules/${module}`);
+    const { sendmail } = (await import(`../modules/${module}`)) as ServiceProviderModule;
     result = await sendmail(payload);
 
     if (!result.isSuccessful()) {
